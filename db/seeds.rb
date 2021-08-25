@@ -10,13 +10,18 @@ require "faker"
 
 Department.destroy_all
 Item.destroy_all
+Comment.destroy_all
 
 5.times do
     d = Department.create(name: Faker::Commerce.department)
     10.times do
-        d.items.create(name: Faker::House.furniture)
+        i = d.items.create(name: Faker::House.furniture)
+        3.times do
+            i.comments.create(body: Faker::Movies::HarryPotter.quote)
+        end
     end
 end
 
 puts "seeded #{Department.all.size} Departments"
 puts "seeded #{Item.all.size} Items"
+puts "seeded #{Comment.all.size} Items"

@@ -5,7 +5,8 @@ const Deps = (props) => {
         return props.deps.map((dep) => (
             <div>
                 <h2>{`Department: ${dep.name}`}</h2>
-                <a href={`departments/${dep.id}`}>View Department</a>
+                <a href={`/departments/${dep.id}`}>View Department</a>
+                <a href={`/departments/${dep.id}`} data-method="delete">Delete Department</a>
             </div>
         ))
     }
@@ -13,6 +14,7 @@ const Deps = (props) => {
     return (
         <div>
             <h1>Departments</h1>
+            <a href="/departments/new">New Department</a>
             {renderDeps()}
         </div>
     );

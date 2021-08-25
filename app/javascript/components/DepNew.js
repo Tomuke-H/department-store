@@ -4,7 +4,8 @@ const DepNew = () => {
     return (
         <div>
             <h1>New Department</h1>
-            <form>
+            <a href="/">Back to All Departments</a>
+            <form action="/departments" method="post">
                 <h2>New Department Name</h2>
                 <input name="department[name]" />
                 <button type="submit">Add Department</button>

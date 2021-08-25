@@ -1,5 +1,5 @@
 class DepartmentsController < ApplicationController
-    before_action :set_dep, only:[:show, :edit]
+    before_action :set_dep, only:[:show, :edit, :update, :destroy]
     def index
         render component: "Deps", props: {deps: Department.all}
     end
@@ -12,15 +12,33 @@ class DepartmentsController < ApplicationController
         render component: "DepNew"
     end
 
+    def create
+        dep = Department.new(dep_params)
+        if(dep.save)
+            redirect_to root_path
+        end
+    end
+
     def edit
-        render component: "DepEdit"
+        render component: "DepEdit", props: {dep: @dep}
+    end
+
+    def update
+        if(@dep.update(dep_params))
+            redirect_to root_path
+        end
+    end
+
+    def destroy
+        @dep.destroy
+        redirect_to root_path
     end
 
 
     private
 
     def dep_params
-        require
+        params.require(:department).permit(:name)
     end
 
     def set_dep

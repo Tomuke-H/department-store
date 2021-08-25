@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
     before_action :set_dep
-    before_action :set_item, only: [:show, :destroy]
+    before_action :set_item, only: [:show, :destroy, :edit, :update]
 
     def index
         render component: "Items", props: {dep: @dep, items: @dep.items}
@@ -22,9 +22,12 @@ class ItemsController < ApplicationController
     end
 
     def edit
+        render component: "ItemEdit", props: {dep: @dep, item: @item}
     end
 
     def update
+        @item.update(item_params)
+        redirect_to department_items_path
     end
 
     def destroy

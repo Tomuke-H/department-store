@@ -5,3 +5,18 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+require "faker"
+
+Department.destroy_all
+Item.destroy_all
+
+5.times do
+    d = Department.create(name: Faker::Commerce.department)
+    10.times do
+        d.items.create(name: Faker::House.furniture)
+    end
+end
+
+puts "seeded #{Department.all.size} Departments"
+puts "seeded #{Item.all.size} Items"

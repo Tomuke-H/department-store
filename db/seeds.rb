@@ -17,7 +17,7 @@ Comment.destroy_all
     10.times do
         i = d.items.create(name: Faker::Commerce.product_name)
         3.times do
-            i.comments.create(body: Faker::Quote.yoda)
+            i.comments.create(body: Faker::Quote.yoda, author: 'Yoda')
         end
     end
 end

@@ -10,6 +10,8 @@ const ComNew = (props) => {
                 <form className="form" action={`/items/${item.id}/comments`} method="post">
                     <h2>New Comment</h2>
                     <textarea name="comment[body]" />
+                    <h2>Author</h2>
+                    <input name="comment[author]" />
                     <button type="submit">Add Comment</button>
                 </form>
             </div>

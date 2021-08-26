@@ -11,6 +11,8 @@ const ComNew = (props) => {
                     <input type="hidden" name="_method" value="patch" />
                     <h2>Update Comment</h2>
                     <textarea defaultValue={`${com.body}`} name="comment[body]" />
+                    <h2>Update Author</h2>
+                    <input defaultValue={`${com.author}`} name="comment[author]" />
                     <button type="submit">Update Comment</button>
                 </form>
             </div>

@@ -8,6 +8,7 @@ const Item = (props) => {
         return coms.map((com) => (
             <div className="comment">
                 <h2>{`${com.body}`}</h2>
+                <h2>{`"${com.author}"`}</h2>
                 <div className="links">
                     <a href={`/items/${item.id}/comments/${com.id}`}>View Comment</a>
                     <a href={`/items/${item.id}/comments/${com.id}/edit`}>Edit Comment</a>
@@ -20,6 +21,7 @@ const Item = (props) => {
         <div>
             <div className="item">
                 <h1>{`${item.name}`}</h1>
+                <a href={`/departments/${item.department_id}/items/${item.id}/edit`}>Edit Item</a>
                 <a href={`/departments/${item.department_id}`}>All items</a>
             </div>
             <a href={`/items/${item.id}/comments/new`}>Add Comment</a>

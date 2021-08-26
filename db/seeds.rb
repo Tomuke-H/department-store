@@ -17,11 +17,11 @@ Comment.destroy_all
     10.times do
         i = d.items.create(name: Faker::Commerce.product_name)
         3.times do
-            i.comments.create(body: Faker::Movies::HarryPotter.quote)
+            i.comments.create(body: Faker::Quote.yoda)
         end
     end
 end
 
 puts "seeded #{Department.all.size} Departments"
 puts "seeded #{Item.all.size} Items"
-puts "seeded #{Comment.all.size} Items"
+puts "seeded #{Comment.all.size} Comments"

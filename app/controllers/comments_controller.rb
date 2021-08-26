@@ -4,7 +4,7 @@ class CommentsController < ApplicationController
     before_action :set_com, only: [:show, :destroy, :edit, :update]
 
     def index
-        render component: "Coms", props: {item: @item, coms: @item.comments}
+        render component: "Item", props: {item: @item, coms: @item.comments}
     end
 
     def show

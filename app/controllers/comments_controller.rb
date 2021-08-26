@@ -4,36 +4,36 @@ class CommentsController < ApplicationController
     before_action :set_com, only: [:show, :destroy, :edit, :update]
 
     def index
-        render component: "Coms", props: {dep: @dep, item: @item, coms: @item.coms}
+        render component: "Coms", props: {dep: @dep, item: @item, coms: @item.comments}
     end
 
     def show
-        render component: "Com", props: {dep: @dep, item: @item}
+        render component: "Com", props: {dep: @dep, item: @item, com: @com}
     end
 
     def new
-        render component: "ComNew", props: {dep: @dep}
+        render component: "ComNew", props: {dep: @dep, item: @item}
     end
 
     def create
         com = @item.comments.new(com_params)
         if(com.save)
-            redirect_to department__items_comments_path
+            redirect_to department_item_comments_path
         end
     end
 
     def edit
-        render component: "ComEdit", props: {dep: @dep, item: @item}
+        render component: "ComEdit", props: {dep: @dep, item: @item, com: @com}
     end
 
     def update
         @com.update(com_params)
-        redirect_to department_items_comments_path
+        redirect_to department_item_comments_path
     end
 
     def destroy
         @com.destroy
-        redirect_to department_items_comments_path
+        redirect_to department_item_comments_path
     end
 
 

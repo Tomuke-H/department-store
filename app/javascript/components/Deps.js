@@ -3,7 +3,7 @@ import React from 'react';
 const Deps = (props) => {
     const renderDeps = () => {
         return props.deps.map((dep) => (
-            <div>
+            <div className="department">
                 <h2>{`${dep.name}`}</h2>
                 <a href={`/departments/${dep.id}`}>View Department</a>
                 <a href={`/departments/${dep.id}/edit`}>Edit Department</a>

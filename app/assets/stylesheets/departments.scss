@@ -1,3 +1,26 @@
 // Place all the styles related to the departments controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+body {
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.department {
+    background-color: azure;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+    border: solid 10px;
+    border-color: black;
+    border-radius: 50px;
+    padding: 40px;
+    width: 300px;
+    height: 200px;
+}

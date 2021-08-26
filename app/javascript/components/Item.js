@@ -7,8 +7,8 @@ const Item = (props) => {
     const renderComs = () => {
         return coms.map((com) => (
             <div className="comment">
-                <h2>{`${com.body}`}</h2>
-                <h2>{`"${com.author}"`}</h2>
+                <h2>{`"${com.body}"`}</h2>
+                <h2>{`${com.author}`}</h2>
                 <div className="links">
                     <a href={`/items/${item.id}/comments/${com.id}`}>View Comment</a>
                     <a href={`/items/${item.id}/comments/${com.id}/edit`}>Edit Comment</a>

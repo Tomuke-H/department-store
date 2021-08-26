@@ -8,8 +8,8 @@ const Com = (props) => {
             <a href={`/items/${item.id}/comments`}>Back to all comments</a>
             <div className="centerMe">
                 <div className="comment">
-                    <h2>{`${com.body}`}</h2>
-                    <h2>{`"${com.author}"`}</h2>
+                    <h2>{`"${com.body}"`}</h2>
+                    <h2>{`${com.author}`}</h2>
                     <a href={`/items/${item.id}/comments/${com.id}/edit`}>Edit Comment</a>
                 </div>
             </div>

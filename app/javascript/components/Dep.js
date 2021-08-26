@@ -1,13 +1,29 @@
 import React from 'react';
 
 const Dep = (props) => {
+    const { items, dep } = props;
+
+    const renderItems = () => {
+        return items.map((item) => (
+            <div className="item">
+                <h2>{`${item.name}`}</h2>
+                <a href={`/departments/${dep.id}/items/${item.id}`}>Show Item</a>
+                <a href={`/departments/${dep.id}/items/${item.id}/edit`}>Edit Item</a>
+                <a href={`/departments/${dep.id}/items/${item.id}`} data-method="delete">Delete Item</a>
+            </div>
+        ))
+    }
+
     return (
-        <div className="department">
-            <h1>Department</h1>
-            <h2>{`${props.dep.name}`}</h2>
-            <a href={`/departments/${props.dep.id}/edit`}>Edit Department</a>
-            <a href={`/departments/${props.dep.id}/items`}>View all items</a>
-            <a href="/">Back to all departments</a>
+        <div>
+            <div className="department">
+                <h2>{`${props.dep.name}`}</h2>
+                <a href={`/departments/${props.dep.id}/edit`}>Edit Department</a>
+                <a href="/">All departments</a>
+            </div>
+            <div className="tile">
+                {renderItems()}
+            </div>
         </div>
     );
 };

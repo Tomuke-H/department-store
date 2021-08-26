@@ -15,7 +15,7 @@ Comment.destroy_all
 5.times do
     d = Department.create(name: Faker::Commerce.department)
     10.times do
-        i = d.items.create(name: Faker::House.furniture)
+        i = d.items.create(name: Faker::Commerce.product_name)
         3.times do
             i.comments.create(body: Faker::Movies::HarryPotter.quote)
         end

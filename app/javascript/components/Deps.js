@@ -14,9 +14,13 @@ const Deps = (props) => {
 
     return (
         <div>
-            <h1>Departments</h1>
-            <a href="/departments/new">New Department</a>
-            {renderDeps()}
+            <div className="titlebar">
+                <h1>Departments</h1>
+                <a href="/departments/new">New Department</a>
+            </div>
+            <div className="tile">
+                {renderDeps()}
+            </div>
         </div>
     );
 };

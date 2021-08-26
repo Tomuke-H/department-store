@@ -13,3 +13,49 @@
  *= require_tree .
  *= require_self
  */
+
+ body {
+    background-color: rgb(49, 49, 49);
+    color: white;
+}
+
+a {
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    background-color: teal;
+    color: white;
+}
+
+
+a:link {
+    color: white;
+    text-decoration: none;
+}
+
+a:visited {
+    color: white;
+    text-decoration: inherit;
+}
+
+a:hover {
+    background-color: azure;
+    color: teal;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tile {
+    display: flex;
+    flex-direction: row;
+    float: left;
+    flex-wrap: wrap;
+}

@@ -65,4 +65,21 @@ a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: gray;
+    border: solid 3px;
+    border-color: aquamarine;
+    width: 400px;
+    height: 300px;
+}
+
+textarea {
+    width: 250px;
+    height: 70px;
+}
+
+.centerMe {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

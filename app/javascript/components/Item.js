@@ -8,7 +8,7 @@ const Dep = (props) => {
             <h2>{`${item.name}`}</h2>
             <a href={`/departments/${dep.id}/items/${item.id}/edit`}>Edit Item</a>
             <a href={`/departments/${dep.id}/items`}>{`Back to all ${dep.name} items`}</a>
-            <a href={`/departments/${dep.id}/items/${item.id}/comments`}>View all comments</a>
+            <a href={`/items/${item.id}/comments`}>View all comments</a>
             <a href="/">Back to all departments</a>
         </div>
     );

@@ -18,7 +18,7 @@ class ItemsController < ApplicationController
     def create
         item = @dep.items.new(item_params)
         if(item.save)
-            redirect_to department_items_path
+            redirect_to department_path(@dep.id)
         end
     end
 
@@ -28,12 +28,12 @@ class ItemsController < ApplicationController
 
     def update
         @item.update(item_params)
-        redirect_to department_items_path
+        redirect_to department_path(@dep.id)
     end
 
     def destroy
         @item.destroy
-        redirect_to department_items_path
+        redirect_to department_path(@dep.id)
     end
 
 

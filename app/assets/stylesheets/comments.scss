@@ -6,9 +6,20 @@
     background-color: gray;
     display: flex;
     flex-direction: column;
-    border: solid 3px;
-    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+    border: solid 10px;
     border-color: burlywood;
-    color: white;
-    margin: 40px;
+    padding: 20px;
+    padding-bottom: 0px;
+    min-width: 410px;
+    max-width: 500px;
+    height: auto;
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+    float: left;
 }

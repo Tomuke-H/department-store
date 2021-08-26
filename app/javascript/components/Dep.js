@@ -21,6 +21,8 @@ const Dep = (props) => {
                 <a href={`/departments/${props.dep.id}/edit`}>Edit Department</a>
                 <a href="/">All departments</a>
             </div>
+            <a href={`/departments/${dep.id}/items/new`}>Add Item</a>
+            <h2>All Items:</h2>
             <div className="tile">
                 {renderItems()}
             </div>

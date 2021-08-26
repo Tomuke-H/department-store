@@ -59,3 +59,10 @@ a:hover {
     float: left;
     flex-wrap: wrap;
 }
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
